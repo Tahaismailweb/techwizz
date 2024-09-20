@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
-import Categories from "./Components/Card";
 import CounterSection from "./Components/counter";
 import Footer from "./Components/Footer";
 import About from "./Components/Welcome";
+import Categories from "./Components/Card";
+import Marquee from "./Components/slider";
+import Product from "./Components/Product";
 
 function App() {
   const navbarRef = useRef(null);
@@ -171,9 +173,8 @@ function App() {
     </div>
         </div>
 
+  
     
-
-      
 
   
 

@@ -351,3 +351,236 @@ i {
     padding-right: 0;
     border-right: none;
 } 
+
+/* scroller start */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Public+Sans:wght@100&display=swap');
+
+/* body {
+   
+    font-family: 'bold', sans-serif;
+} */
+
+
+.marquee {
+    margin: 0em 10px;
+}
+.marquee-box-one {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3em 0 0 0;
+}
+.marquee-content-one {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    animation: scroll-one 30s linear infinite;
+}
+.marquee-box-two {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 3em 0 6em 0;
+}
+
+.marquee-text {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 15px 30px;
+    color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    text-shadow: 0 0 2px black,0 0 4px black;
+}
+.marquee-text:hover{
+ color: #bb9a65;
+ transition-duration: 0.3s;
+}
+
+@keyframes scroll-one {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* product card */
+/* Palette */
+:root {
+    --dark-blue: #31353d;
+    --green: #9bb6aa;
+    --body-color: #f9f9f9;
+    --base-font-family: 'MavenProRegular', Arial, Tahoma, Trebuchet MS, Verdana;
+    --base-font-size: 14px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Globals */
+  p {
+    margin: 0 0 30px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* Titles */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    color: var(--dark-blue);
+    margin: 0;
+  }
+  
+  /* Defaults */
+  body {
+    background: url("../img/main-bg.png");
+    color: #aaa;
+    font-size: var(--base-font-size);
+    font-family: var(--base-font-family);
+    height: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  figure {
+    margin: 0;
+    line-height: 0;
+  }
+  
+  main[role="main"] {
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+    clear: both;
+  }
+  
+  /* Product Box */
+  .product {
+    background: #fff;
+    max-width: 300px;
+    position: relative;
+    z-index: 15;
+    margin: 0 auto;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    width: 100%;
+  }
+  
+  .product-description {
+    position: relative;
+    z-index: 15;
+    background: #fff;
+    clear: both;
+  }
+  
+  .product-description .info {
+    padding: 15px;
+    color: #aaa;
+    font-size: 0.85em;
+    width: 75%;
+    float: left;
+  }
+  
+  .product-description .info h1 {
+    font-size: 20px;
+    margin: 0 0 5px;
+  }
+  
+  .product-description .info p {
+    margin-bottom: 15px;
+    line-height: 1.3em;
+  }
+  
+  .product-description .price {
+    width: 25%;
+    float: left;
+    color: var(--green);
+    font-size: 3.5em;
+    position: relative;
+    margin-top: 25px;
+  }
+  
+  .product-description .price::before {
+    content: '$';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    font-size: 0.35em;
+  }
+  
+  /* Sidebar */
+  .product-sidebar {
+    height: 100%;
+    background: var(--dark-blue);
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: right 0.3s ease;
+    border-radius: 0 2px 2px 0;
+  }
+  
+  .product-sidebar button {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 0.9em;
+    font-size: 0.8em;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .product-sidebar button.buy {
+    background: transparent
+      url('https://raw.githubusercontent.com/brunodsgn/productpreview/master/assets/img/icons/buy.png') no-repeat 15px;
+  }
+  
+  .product:hover .product-sidebar {
+    right: -50px;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 480px) {
+    .product .product-sidebar {
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 0;
+      top: inherit;
+      border-radius: 0 0px 2px 2px;
+      transition: bottom 0.3s ease;
+    }
+  
+    .product:hover .product-sidebar {
+      bottom: -50px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .product .product-sidebar {
+      bottom: -50px;
+    }
+  }
+  
